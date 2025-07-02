@@ -1,7 +1,5 @@
 package main.java.at.technikum;
 
-package at.technikum;
-
 public class Board {
     private char[][] cells = new char[3][3];
 
