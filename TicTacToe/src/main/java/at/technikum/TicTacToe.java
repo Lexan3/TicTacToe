@@ -1,16 +1,17 @@
-package main.java.at.technikum;
+package at.technikum;
 
+import at.technikum.Board;
 import java.util.Scanner;
 
 public class TicTacToe {
-    private Player player1;
-    private Player player2;
-    private Player currentPlayer;
+    private at.technikum.Player player1;
+    private at.technikum.Player player2;
+    private at.technikum.Player currentPlayer;
     private Board board;
 
     public TicTacToe() {
-        player1 = new Player('X');
-        player2 = new Player('O');
+        player1 = new at.technikum.Player('X');
+        player2 = new at.technikum.Player('O');
         currentPlayer = player1;
         board = new Board();
     }
@@ -60,4 +61,15 @@ public class TicTacToe {
     public static void main(String[] args) {
         new TicTacToe().start();
     }
+
+
+    // für tests
+    public at.technikum.Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
 }

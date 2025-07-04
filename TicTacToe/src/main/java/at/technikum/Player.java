@@ -1,4 +1,4 @@
-package main.java.at.technikum;
+package at.technikum;
 
 public class Player {
     private char marker;
