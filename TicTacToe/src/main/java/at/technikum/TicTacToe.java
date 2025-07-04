@@ -19,7 +19,6 @@ public class TicTacToe {
     public void start() {
         Scanner scanner = new Scanner(System.in);
         board.clear();
-
         while (true) {
             System.out.println("Current Player: " + currentPlayer.getMarker());
             board.print();
@@ -31,9 +30,7 @@ public class TicTacToe {
                 System.out.print("column (0-2): ");
                 col = scanner.nextInt();
             } while (!isValidMove(row, col));
-
             board.place(row, col, currentPlayer.getMarker());
-
             if (board.hasWinner()) {
                 board.print();
                 System.out.println("Player " + currentPlayer.getMarker() + " wins!");
@@ -45,7 +42,6 @@ public class TicTacToe {
                 System.out.println("Draw!");
                 break;
             }
-
             switchCurrentPlayer();
         }
     }
